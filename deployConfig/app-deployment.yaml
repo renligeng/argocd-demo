@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: myapp
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: myapp
@@ -13,7 +13,7 @@ spec:
         app: myapp
     spec:
       containers:
-      - image: vmwaresaas.jfrog.io/singleton-docker/singleton-manager-i18n-saas:0.6.13.0
+      - image: vmwaresaas.jfrog.io/singleton-docker/singleton-manager-i18n-saas:0.7.0.0
         name: myapp
         ports:
         - containerPort: 8090
